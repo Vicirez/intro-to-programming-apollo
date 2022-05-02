@@ -17,3 +17,51 @@ for (let i = 0; i < skills.length; i++) {
     skill.textContent = skills[i];
     skillList.appendChild(skill);
 }
+
+var messageForm = document.querySelector('form[name="leave_message"]');
+// If statement used to keep error from occuring
+console.log(messageForm); // Checks to see if DOM selector is working properly
+if (messageForm) {
+    // Handles message Form
+    messageForm.addEventListener("submit", (event) => {
+
+        //removeButton.innerText("remove");
+        // console.log("Form has been submitted");
+        // Create 
+        event.preventDefault();
+
+        // Declare variables and set equal to attributes from form
+        let name, email, message;
+        const element = event.target;
+        name = element.name;
+        email = element.email;
+        message = element.message;
+        //console.log(name);
+
+        console.log(name.value, email.value, message.value);
+
+
+        let messageSection = document.getElementById("messages");
+        messageList = messageSection.querySelector("ul");
+        let newMessage = document.createElement("li");
+        newMessage.innerHTML = '<a href="mailto:vicramirez829@gmail.com">name</a> <br> <span></span>'; // fix use span too
+
+        let removeButton =  document.createElement("button");
+        removeButton.innerText="remove";
+        removeButton.setAttribute("type", "button");
+        removeButton.addEventListener("click", (event) => {
+            // find buttons parent element using DOM traversal (parentNode property) ann store it in entryy
+            let entry = removeButton.parentNode;
+            // remove entry element from DOM
+            entry.remove();
+
+        });
+        // append removeButton to newMessage element
+        newMessage.appendChild(removeButton);
+        // append newMessage to the messageList element
+        messageList.appendChild(newMessage);
+
+
+        element.reset();
+});
+}
