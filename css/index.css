@@ -1,0 +1,38 @@
+* {
+    background-color: rgb(165, 150, 171);
+    color: rgb(77, 82, 84);
+    font-family: "Lato", sans-serif;
+    margin: 10px;;
+    padding: 15px;
+}
+
+/*Formats all unordered lists, since there are little
+to no selectors for lists specific formatting will be done afterwards*/
+ul {
+    list-style-type: upper-aplha;
+    line-height: 0%;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 30px;
+    color: teal;
+}
+
+input, textarea {
+    font-size: 12px;
+    padding: 15px;
+    border-color: black;
+    border-radius: 30%;
+}
+
+/*Txt values for all headings*/
+h1, h2, h3 {
+    font-size:  35px;
+    font-weight: 1000;
+    color: rgb(13, 136, 128);
+}
+
+div, p, title, h1, h2, #messages, input, textarea {
+    background-color: rgb(214, 172, 157);
+}
