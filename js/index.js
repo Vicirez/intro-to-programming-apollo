@@ -63,5 +63,23 @@ if (messageForm) {
 
 
         element.reset();
-});
+    });
 }
+
+fetch("https://api.github.com/users/Vicirez/repos").then(function(response) {
+    // Successful response
+    return response.json();
+})
+.then(function(repositories) {
+    console.log(repositories)
+    
+    let projects = repositories;
+    var projectsSection = document.querySelector("#projects");
+    var projectsList = projectsSection.querySelector("ul");
+
+    for (let i = 0; i < projects.length; i++) {
+        let project = document.createElement("li");
+        project.textContent = projects[i].name;
+        projectsList.appendChild(project);
+}
+});
