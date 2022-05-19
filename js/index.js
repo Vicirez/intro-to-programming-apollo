@@ -44,13 +44,13 @@ if (messageForm) {
         let messageSection = document.getElementById("messages");
         messageList = messageSection.querySelector("ul");
         let newMessage = document.createElement("li");
-        newMessage.innerHTML = '<a href="mailto:vicramirez829@gmail.com">name</a> <br> <span></span>'; // fix use span too
+        newMessage.innerHTML = '<a href="mailto:vicramirez829@gmail.com">name</a> <br> <span></span>'; // fix use span too 
 
         let removeButton =  document.createElement("button");
         removeButton.innerText="remove";
         removeButton.setAttribute("type", "button");
         removeButton.addEventListener("click", (event) => {
-            // find buttons parent element using DOM traversal (parentNode property) ann store it in entryy
+            // find buttons parent element using DOM traversal (parentNode property) and store it in entry
             let entry = removeButton.parentNode;
             // remove entry element from DOM
             entry.remove();

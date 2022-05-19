@@ -1,38 +1,64 @@
+/*Changing appearance to whole document*/
 * {
-    background-color: rgb(165, 150, 171);
-    color: rgb(77, 82, 84);
+    background-color: grey;
     font-family: "Lato", sans-serif;
-    margin: 10px;;
-    padding: 15px;
+    margin: 30px;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 /*Formats all unordered lists, since there are little
 to no selectors for lists specific formatting will be done afterwards*/
-ul {
-    list-style-type: upper-aplha;
+ul, ul li {
+    list-style-type: upper-roman;
     line-height: 0%;
+    background-color: #670314;
+    color: white;
+
 }
 
 label {
     font-size: 15px;
     font-weight: 30px;
-    color: teal;
+    color: white;
 }
 
 input, textarea {
     font-size: 12px;
     padding: 15px;
-    border-color: black;
-    border-radius: 30%;
+    border: none;
+    border-color: transparent;
+    border-radius: 10%;
 }
 
 /*Txt values for all headings*/
 h1, h2, h3 {
     font-size:  35px;
     font-weight: 1000;
-    color: rgb(13, 136, 128);
+    text-align: center;
+    background-color: darkcyan;
+    color: white;
+    outline-color: #670314;
 }
 
-div, p, title, h1, h2, #messages, input, textarea {
-    background-color: rgb(214, 172, 157);
+div, p, title, #messages, input, textarea {
+    background-color: #670314;
+    color: white;
+}
+
+h2 a {
+    width: fit-content;
+    height: 20px;
+}
+
+body {
+    background-image: url("img/BG.png");
+}
+/*Sets values for when screen size is 600 pixels or less*/
+@media only screen and (max-width:600px) {
+    * {
+        margin: 10px;
+        padding: 5px;
+        border-radius: 10px;
+    }
 }
